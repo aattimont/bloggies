@@ -1,0 +1,27 @@
+myapp_article_lister:
+  pattern: /article/lister
+  defaults: { _controller: MyAppBlogBundle:Article:lister }
+myapp_article_by_category_lister:
+  pattern: /article/lister/{catid}
+  defaults: { _controller: MyAppBlogBundle:Article:lister }
+myapp_article_ajouter:
+  pattern: /article/ajouter
+  defaults: { _controller: MyAppBlogBundle:Article:editer }
+myapp_article_modifier:
+  pattern: /article/modifier/{id}
+  defaults: { _controller: MyAppBlogBundle:Article:editer }
+myapp_article_supprimer:
+  pattern: /article/supprimer/{id}
+  defaults: { _controller: MyAppBlogBundle:Article:supprimer }
+myapp_category_lister:
+  pattern: /category/
+  defaults: { _controller: MyAppBlogBundle:Category:lister }
+myapp_category_ajouter:
+  pattern: /category/ajouter
+  defaults: { _controller: MyAppBlogBundle:Category:editer }
+myapp_category_modifier:
+  pattern: /category/modifier/{id}
+  defaults: { _controller: MyAppBlogBundle:Category:editer }
+myapp_category_supprimer:
+  pattern: /category/supprimer/{id}
+  defaults: { _controller: MyAppBlogBundle:Category:supprimer }

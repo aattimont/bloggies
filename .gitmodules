@@ -1,0 +1,3 @@
+[submodule "vendor/bundles/Knp/Bundle/MenuBundle"]
+	path = vendor/bundles/Knp/Bundle/MenuBundle
+	url = https://github.com/knplabs/KnpMenuBundle.git

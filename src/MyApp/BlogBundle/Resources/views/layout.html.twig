@@ -1,0 +1,25 @@
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <link rel="stylesheet" href="{{ asset('bundles/myappblogbundle/css/main.css') }}" type="text/css" media="all" />
+        <title>{% block title %}My App{% endblock %}</title>
+    </head>
+    <body>
+        <div id="header">
+            {% block content_header %}                
+               <!-- <ul id="menu">
+                    <li><a href="{{ path('myapp_article_lister') }}">List of articles</a></li>
+                    <li><a href="{{ path('myapp_category_lister') }}">List of categories</a></li>                    
+                </ul> -->
+                <div id="nav">
+                    {{ knp_menu('main') }}
+                </div>
+            {% endblock %}
+        </div>
+        
+        <div id="content">
+            {% block content %}
+            {% endblock %}
+        </div>
+    </body>
+</html>

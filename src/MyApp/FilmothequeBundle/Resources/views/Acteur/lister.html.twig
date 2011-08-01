@@ -1,0 +1,26 @@
+{% extends 'MyAppFilmothequeBundle::layout.html.twig' %}
+
+{% block title %}Liste des acteurs{% endblock %}
+
+{% block content %}
+
+<h1>Liste des acteurs</h1>
+
+<table>
+{% for a in acteurs %}
+	<tr>
+<td>{{ a.nom }}</td>
+<td>{{ a.prenom }}</td>
+<td>{{ a.dateNaissance|date('d/m/Y') }}</td>
+<td>{{ a.sexe }}</td>
+<td><a href="{{ path('myapp_acteur_modifier', { 'id': a.id }) }}">Modifier</a></td>
+<td><a href="{{ path('myapp_acteur_supprimer', { 'id': a.id }) }}">Supprimer</a></td>
+</tr>
+{% else %}
+	<tr><td>Aucun acteur n’a été trouvé.</td></tr>
+{% endfor %}
+</table>
+
+<p><a href="{{ path('myapp_acteur_ajouter') }}">Ajouter un acteur</a><p>
+
+{% endblock %}

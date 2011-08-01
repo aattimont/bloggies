@@ -1,0 +1,24 @@
+{% extends 'MyAppFilmothequeBundle::layout.html.twig' %}
+
+{% block title %}Liste des films{% endblock %}
+
+{% block content %}
+
+<h1>Liste des films</h1>
+
+<table>
+{% for f in films %}
+	<tr>
+<td>{{ f.titre }}</td>
+<td><a href="{{ path('myapp_film_voir', { 'id': f.id }) }}">Voir</a></td>
+<td><a href="{{ path('myapp_film_modifier', { 'id': f.id }) }}">Modifier</a></td>
+<td><a href="{{ path('myapp_film_supprimer', { 'id': f.id }) }}">Supprimer</a></td>
+</tr>
+{% else %}
+	<tr><td>Aucun film n’a été trouvé.</td></tr>
+{% endfor %}
+</table>
+
+<p><a href="{{ path('myapp_film_ajouter') }}">Ajouter un film</a><p>
+
+{% endblock %}

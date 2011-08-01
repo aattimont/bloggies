@@ -1,0 +1,22 @@
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <link rel="stylesheet" href="{{ asset('bundles/myappfilmothequebundle/css/main.css') }}" type="text/css" media="all" />
+        <title>{% block title %}My App{% endblock %}</title>
+    </head>
+    <body>
+        <div id="header">
+            {% block content_header %}                
+                <ul id="menu">
+                    <li><a href="{{ path('myapp_film_lister') }}">Liste des films</a></li>
+                    <li><a href="{{ path('myapp_acteur_lister') }}">Liste des acteurs</a></li>                    
+                </ul>
+            {% endblock %}
+        </div>
+        
+        <div id="content">
+            {% block content %}
+            {% endblock %}
+        </div>
+    </body>
+</html>

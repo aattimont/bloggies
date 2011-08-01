@@ -1,7 +1,10 @@
-MyAppFilmothequeBundle:
-    resource: "@MyAppFilmothequeBundle/Controller/"
-    type:     annotation
-    prefix:   /
+MyAppBlogBundle:
+    resource: "@MyAppBlogBundle/Resources/config/routing.yml"
+    prefix:   /blog
+
+myapp:
+  resource: "@MyAppFilmothequeBundle/Resources/config/routing.yml"
+  prefix: /myapp
 
 # Internal routing configuration to handle ESI
 #_internal:

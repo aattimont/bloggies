@@ -1,0 +1,18 @@
+{% extends 'MyAppBlogBundle::layout.html.twig' %}
+
+{% block title %}Ajouter/Modifier une categorie{% endblock %}
+
+{% block content %}
+
+<h1>Ajouter une categorie</h1>
+
+{% if message %}
+<p>{{ message }}</p>
+{% endif %}
+<form action="" method="post" {{ form_enctype(form) }}>
+    {{ form_widget(form) }}
+    <input type="submit" />
+</form>
+<p><a href="{{ path('myapp_category_lister') }}">Retour à la liste des categories</a></p>
+
+{% endblock %}

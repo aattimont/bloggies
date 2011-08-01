@@ -1,0 +1,49 @@
+<?php
+
+/* MyAppFilmothequeBundle:Default:index.html.twig */
+class __TwigTemplate_ee3f603a1ad4c4d6c82d15f09e3642e3 extends Twig_Template
+{
+    protected function doDisplay(array $context, array $blocks = array())
+    {
+        $context = array_merge($this->env->getGlobals(), $context);
+
+        // line 1
+        echo "<html>
+\t<body>
+\t\t<h1>Liste des catégories</h1>
+\t\t";
+        // line 4
+        $context['_parent'] = (array) $context;
+        $context['_seq'] = twig_ensure_traversable($this->getContext($context, 'categories'));
+        $context['_iterated'] = false;
+        foreach ($context['_seq'] as $context['_key'] => $context['cat']) {
+            // line 5
+            echo "\t\t\t<p>";
+            echo twig_escape_filter($this->env, $this->getAttribute($this->getContext($context, 'cat'), "nom", array(), "any", false), "html");
+            echo "</p>
+\t\t";
+            $context['_iterated'] = true;
+        }
+        if (!$context['_iterated']) {
+            // line 7
+            echo "\t\t\t<p>Aucune catégorie n’a été trouvée.</p>
+\t\t";
+        }
+        $_parent = $context['_parent'];
+        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['cat'], $context['_parent'], $context['loop']);
+        $context = array_merge($_parent, array_intersect_key($context, $_parent));
+        // line 9
+        echo "\t</body>
+</html>";
+    }
+
+    public function getTemplateName()
+    {
+        return "MyAppFilmothequeBundle:Default:index.html.twig";
+    }
+
+    public function isTraitable()
+    {
+        return false;
+    }
+}

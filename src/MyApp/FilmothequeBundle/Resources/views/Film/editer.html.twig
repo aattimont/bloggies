@@ -1,0 +1,18 @@
+{% extends 'MyAppFilmothequeBundle::layout.html.twig' %}
+
+{% block title %}Ajouter/Modifier un film{% endblock %}
+
+{% block content %}
+
+<h1>Ajouter un film</h1>
+
+{% if message %}
+<p>{{ message }}</p>
+{% endif %}
+<form action="" method="post" {{ form_enctype(form) }}>
+    {{ form_widget(form) }}
+    <input type="submit" />
+</form>
+<p><a href="{{ path('myapp_film_lister') }}">Retour à la liste des films</a></p>
+
+{% endblock %}
